@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 project(CoMusic)
 
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${OUTDIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTDIR})
+
 if(NOT IS_DIRECTORY "${PROJECT_SOURCE_DIR}/submod")
 execute_process(
 	COMMAND git clone https://github.com/pybind/pybind11 ${PROJECT_SOURCE_DIR}/submod
